@@ -1,9 +1,7 @@
 
 const dictionary = {
-    header : {
-        title : "",
-        logo : "",
-    }
+    headerTitle : "header",
+    homeTitle : "home"
 }
 
 

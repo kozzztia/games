@@ -1,6 +1,10 @@
-import '@/styles/globals.css'
+import '@/styles/globals.scss'
+import style from "@/styles/layout.module.scss"
 import type {Metadata} from 'next'
 import React from "react";
+import LayoutHeader from "@/components/Layout/Header/LayoutHeader";
+
+import LayoutMain from "@/components/Layout/Main/LayoutMain";
 
 export const metadata: Metadata = {
     title: 'Create Next App',
@@ -12,21 +16,16 @@ export default function RootLayout({children,}: { children: React.ReactNode }) {
         <html lang="en">
         <body>
 
-        <header>
-
+        <header className={style.layoutHeader}>
+            <LayoutHeader/>
         </header>
 
-        <nav>
-
-        </nav>
-
-        <main>
-            {children}
+        <main className={style.layoutMain}>
+            <LayoutMain>
+                {children}
+            </LayoutMain>
         </main>
 
-        <footer>
-
-        </footer>
         </body>
         </html>
     )

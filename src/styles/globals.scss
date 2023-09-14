@@ -1,0 +1,38 @@
+@import "mixin";
+
+:root {
+  --max-width: 1600px;
+  --centred-page : 0 auto;
+  --main-font-size : 20px;
+  //container
+  --container-desctop-padding : 20px;
+  --container-tablet-padding : 10px;
+  --container-mobile-padding : 5px;
+  //layout
+  --header-height : 100px;
+  --main-height : calc(100vh - var(--header-height));
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+}
+
+html,
+body {
+  max-width: 100vw;
+  min-height: auto;
+  overflow-x: hidden;
+  font-size: var(--main-font-size);
+}
+body{
+  position: relative;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+

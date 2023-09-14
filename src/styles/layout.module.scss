@@ -1,0 +1,15 @@
+.layoutHeader{
+  width : 100%;
+  position: fixed;
+  min-height: var(--header-height) ;
+
+}
+.layoutMain{
+  margin-top: var(--header-height);
+  position: relative;
+  width : 100%;
+  min-height: var(--main-height);
+}
+
+
+

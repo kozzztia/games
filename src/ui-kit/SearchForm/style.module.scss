@@ -1,0 +1,28 @@
+
+.searchForm{
+  max-width : 200px;
+  width : 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  background: var(--elememt-bg-colo0r);
+  border : 1px solid var(--decor-color);
+  overflow: hidden;
+  .input{
+    background: inherit;
+    width : 100%;
+    color :var(--major-color);
+    padding: var(--elememt-padding);
+  }
+  .button{
+    padding: var(--elememt-padding);
+    position: relative;
+    background: var(--decor-color);
+    svg{
+      width :100%;
+      height: 100%;
+      fill: var(--elememt-bg-colo0r);
+      cursor : pointer;
+    }
+  }
+}

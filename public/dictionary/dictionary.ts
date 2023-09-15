@@ -1,7 +1,10 @@
 
 const dictionary = {
     headerTitle : "header",
-    homeTitle : "home"
+    homeTitle : "home",
+    searchFormPlaceHolder : "insert",
+    searchFormPlaceButton : "search",
+
 }
 
 

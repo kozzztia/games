@@ -24,14 +24,3 @@
   }
 }
 
-@mixin header-container-styles{
-  @include desktop{
-    --header-height: 70px;
-  }
-  @include tablet{
-    --header-height: 50px;
-  }
-  @include mobile{
-    --header-height: 50px;
-  }
-}

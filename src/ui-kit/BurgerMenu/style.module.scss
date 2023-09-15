@@ -1,0 +1,12 @@
+
+.burger{
+  position: relative;
+  background: inherit;
+  padding : var(--elememt-padding);
+  cursor: pointer;
+  width : inherit;
+  height: auto;
+  svg{
+    stroke : var(--major-color);
+  }
+}

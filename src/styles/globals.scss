@@ -1,10 +1,6 @@
 @import "mixin";
 
 :root {
-  //sizing
-  @include header-container-styles;
-
-
   //default
   --max-width: 1600px;
   --centred-page : 0 auto;
@@ -15,15 +11,14 @@
   --container-mobile-padding : 5px;
   --elememt-padding : 5px 10px;
   //layout
-  --header-height : 50px;
-  --main-height : calc(100vh - var(--header-height));
+  --header-height : auto;
+  --main-height : 100vh;
   //backgrounds
-  --header-background : #1b1a18;
-  --main-background : rgba(32, 11, 10, 0.9);
+  --header-background : rgba(255, 255, 255, 0.1);
+  --main-background : rgba(0, 0, 0, 0.6);
   //colors
   --major-color : #84807d;
-  --decor-color : rgba(119, 98, 93, 0.5);
-  --elememt-bg-colo0r : #231b18;
+  --elememt-bg-colo0r : rgba(0, 0, 0, 0.2);
 }
 * {
   box-sizing: border-box;
@@ -35,11 +30,12 @@
 
 html,
 body {
-  color : var(--major-color);
+
   max-width: 100vw;
   min-height: auto;
   overflow-x: hidden;
   font-size: var(--main-font-size);
+  color : var(--major-color);
 }
 body{
   position: relative;

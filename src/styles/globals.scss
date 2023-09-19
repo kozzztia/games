@@ -5,20 +5,40 @@
   --max-width: 1600px;
   --centred-page : 0 auto;
   --main-font-size : 20px;
+  --transition: 0.2s;
   //container
+  --container-padding : 20px;
   --container-desctop-padding : 20px;
   --container-tablet-padding : 10px;
   --container-mobile-padding : 5px;
   --elememt-padding : 5px 10px;
+  --element-margin : 5px;
   //layout
   --header-height : auto;
   --main-height : 100vh;
   //backgrounds
-  --header-background : rgba(255, 255, 255, 0.1);
+  --header-background : rgb(0, 0, 0 , .6);
   --main-background : rgba(0, 0, 0, 0.6);
+  --elememt-bg-color : rgba(0, 0, 0, 0.2);
   //colors
   --major-color : #84807d;
-  --elememt-bg-colo0r : rgba(0, 0, 0, 0.2);
+  --decor-color : rgba(194, 39, 35, 0.6);
+
+
+
+
+
+
+  //@media for vars
+  @include desktop{
+    --container-padding : var(--container-desctop-padding)
+  }
+  @include tablet{
+    --container-padding : var(--container-tablet-padding)
+  }
+  @include mobile{
+    --container-padding : var(--container-mobile-padding)
+  }
 }
 * {
   box-sizing: border-box;

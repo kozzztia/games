@@ -2,15 +2,18 @@
 import React, {useState} from 'react';
 import style from "./style.module.scss"
 import dictionary from "../../../public/dictionary/dictionary";
+import classNames from "@/services/classNameGenerator";
+import { useRouter } from "next/navigation";
 
-const SearchForm = () => {
+const SearchForm = ({className}  :{className : string}) => {
     const [searchValue, setSearchValueValue] = useState<string>("");
     const {searchFormPlaceHolder} = dictionary;
+    const {push} = useRouter()
     return (
-        <form className={style.searchForm}
+        <form className={classNames(className , style.searchForm)}
               onSubmit={async (e) => {
                   await e.preventDefault()
-                  await console.log(searchValue)
+                  await push(`/?search=${searchValue}`)
                   await setSearchValueValue("")
               }}
         >

@@ -1,21 +1,29 @@
-
 import style from "@/styles/home.module.scss"
 import dictionary from "../../public/dictionary/dictionary";
+import TopGamesList from "@/ui-kit/TopGamesList/TopGamesList";
+import {getGenreNames} from "@/services/getGenreNames";
+import {NextResponse} from "next/server";
+import * as querystring from "querystring";
 
 
-const getData = async ()=>{
-  const api = process.env.GAME_API;
-  const key = process.env.GAME_KEY;
-  fetch(api)
-      .then(response => response.json())
-      .then(json => console.log(json))
-}
-export default async function Home (){
-  await getData()
+
+
+export default async function Home ({searchParams,}: {searchParams?: { [key: string]: string | string[] | undefined };
+}){
   const {homeTitle} = dictionary;
-  return (
-  <div className={style.home}>
-    {/*{homeTitle}*/}
-  </div>
-  )
+  const genresNames = await getGenreNames()
+  {
+    if(!searchParams.search){
+        return (
+            <div className={style.home}>
+                {
+                    genresNames?.map(item => <TopGamesList key={item.id} genre={item.name}/>)
+                }
+            </div>
+        )
+    }else if(searchParams){
+        return<p>{searchParams.search}</p>
+    }
+  }
+
 }

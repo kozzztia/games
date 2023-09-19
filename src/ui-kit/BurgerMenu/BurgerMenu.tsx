@@ -3,10 +3,10 @@ import React from 'react';
 import classNames from "@/services/classNameGenerator";
 import style from "./style.module.scss"
 
-const BurgerMenu = () => {
+const BurgerMenu = ({className} : {className?: string}) => {
     return (
         <button
-            className={classNames(style.burger)}
+            className={classNames(className , style.burger)}
             onClick={()=>{
                 console.log("e")
             }}

@@ -1,0 +1,10 @@
+.homeLink{
+  position: relative;
+  padding : var(--elememt-padding);
+  cursor: pointer;
+  width : inherit;
+  height: auto;
+  svg{
+    fill : var(--major-color);
+  }
+}

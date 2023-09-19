@@ -1,0 +1,13 @@
+@import "@/styles/mixin";
+
+.list{
+  left : 0;
+  top : 80px;
+  width :300px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding : var(--container-padding);
+  //transform: scale(0 , 100%);
+}

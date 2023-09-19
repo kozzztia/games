@@ -12,15 +12,6 @@
   position: relative;
   max-width: var(--max-width);
   margin : var(--centred-page);
-  padding : var(--container-desctop-padding);
-  @include desktop{
-    padding : var(--container-desctop-padding)
-  }
-  @include tablet{
-    padding : var(--container-tablet-padding)
-  }
-  @include mobile{
-    padding : var(--container-mobile-padding)
-  }
+  padding : var(--container-padding);
 }
 

@@ -12,10 +12,24 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: stretch;
+  border-bottom: 1px solid var(--decor-color);
+  .genresList{
+
+  }
+  .homeLink{
+
+  }
+  .burger{
+    margin-right :auto;
+  }
+  .form{
+    max-width: 200px;
+  }
 }
 
 .main{
   min-height: var(--main-height);
+  padding-top: 100px;
 
 }
 

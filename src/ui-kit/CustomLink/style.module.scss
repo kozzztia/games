@@ -1,0 +1,11 @@
+.link{
+  white-space: nowrap;
+  cursor: pointer;
+  border : 1px solid var(--major-color);
+  background: var(--elememt-bg-color);
+  padding : var(--elememt-padding);
+  margin  : var(--element-margin)
+}
+.active{
+  color : var(--decor-color);
+}

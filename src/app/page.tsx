@@ -1,6 +1,6 @@
 import style from "@/styles/home.module.scss"
 import dictionary from "../../public/dictionary/dictionary";
-import TopGamesList from "@/ui-kit/TopGamesList/TopGamesList";
+import TopGamesList from "@/components/TopGamesList/TopGamesList";
 import {getGenreNames} from "@/services/getGenreNames";
 
 
@@ -15,7 +15,7 @@ export default async function Home ({searchParams,}: {searchParams?: { [key: str
         return (
             <div className={style.home}>
                 {
-                    genresNames?.map(item => <TopGamesList key={item.id} genre={item.name}/>)
+                    genresNames?.map(item => <TopGamesList key={item.id} genre={item.slug} name={item.name}/>)
                 }
             </div>
         )

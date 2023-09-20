@@ -8,25 +8,17 @@
   padding : var(--elememt-padding);
   margin-bottom: var(--element-margin);
   overflow: hidden;
-  //&::after{
-  //  transition: inherit;
-  //  content : "";
-  //  display : block;
-  //  position: absolute;
-  //  width : 50px;
-  //  border : 1px solid var(--major-color);
-  //  transform: rotate(45deg);
-  //  top: 10px;
-  //  left : 100%;
-  //}
+  text-overflow: ellipsis;
+  font-size: 25px;
+
   &:focus,
   &:hover{
     color : var(--decor-color);
-    //&::after{
-    //  left : -100%
-    //}
+    transform: scale(1.05,1);
+
   }
 }
 .active{
   border : 1px solid var(--decor-color);
+  transform: scale(1.05,1);
 }

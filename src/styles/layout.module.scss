@@ -9,9 +9,8 @@
 .layoutMain{
   z-index: auto;
   position: relative;
-  width : 100%;
-  min-height:var(--main-height);
-  padding-top: var(--header-height);
+  width : 100vw;
+  height: var(--main-height);
   background: var(--main-background);
   &::before{
     content: "";

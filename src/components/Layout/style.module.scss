@@ -12,25 +12,19 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: stretch;
+  align-items: center;
   border-bottom: 1px solid var(--decor-color);
   .homeLink{
 
   }
-  .burger{
-    margin-right :auto;
-  }
-  .hide{
-    transform: scale(0,1);
-  }
   .form{
-    max-width: 200px;
+    max-width: 300px;
   }
 }
 
 .main{
   min-height: var(--main-height);
-  padding-top: 80px;
+  padding-top: var(--header-height);
   display: flex;
   flex-direction: row;
   justify-content: space-between;

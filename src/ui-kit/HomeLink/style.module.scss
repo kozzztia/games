@@ -1,13 +1,15 @@
 .homeLink{
   position: relative;
-  padding : var(--elememt-padding);
   cursor: pointer;
   width : inherit;
   height: auto;
   transition: var(--transition);
   svg{
+    position: relative;
     transition: inherit;
     fill : var(--major-color);
+    width : 30px;
+    height: 30px;
   }
   &:focus,
   &:hover{

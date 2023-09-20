@@ -2,26 +2,23 @@
 
 :root {
   //default
-  --max-width: 1600px;
+  --max-width: 2800px;
   --centred-page : 0 auto;
   --main-font-size : 20px;
-  --transition: 0.2s;
+  --transition: 0.5s;
   //container
   --container-padding : 20px;
-  --container-desctop-padding : 20px;
-  --container-tablet-padding : 10px;
-  --container-mobile-padding : 5px;
   --elememt-padding : 5px 10px;
   --element-margin : 5px;
   //layout
-  --header-height : auto;
+  --header-height :80px;
   --main-height : 100vh;
   //backgrounds
   --header-background : rgb(0, 0, 0 , .6);
   --main-background : rgba(0, 0, 0, 0.6);
   --elememt-bg-color : rgba(0, 0, 0, 0.2);
   //colors
-  --major-color : #84807d;
+  --major-color : #b9b9b9;
   --decor-color : rgba(194, 39, 35, 0.6);
 
 
@@ -31,13 +28,16 @@
 
   //@media for vars
   @include desktop{
-    --container-padding : var(--container-desctop-padding)
+    --container-padding : 20px;
+    --header-height : 80px;
   }
   @include tablet{
-    --container-padding : var(--container-tablet-padding)
+    --container-padding : 10px;
+    --header-height : 70px
   }
   @include mobile{
-    --container-padding : var(--container-mobile-padding)
+    --container-padding : 5px;
+    --header-height : 50px;
   }
 }
 * {

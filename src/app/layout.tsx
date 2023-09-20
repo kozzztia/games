@@ -1,10 +1,11 @@
 import '@/styles/globals.scss'
 import style from "@/styles/layout.module.scss"
 import type {Metadata} from 'next'
-import React from "react";
+import React, {Suspense} from "react";
 import LayoutHeader from "@/components/Layout/Header/LayoutHeader";
 
 import LayoutMain from "@/components/Layout/Main/LayoutMain";
+import Loading from "@/components/Loading/Loading";
 
 export const metadata: Metadata = {
     title: 'Create Next App',
@@ -22,7 +23,7 @@ export default function RootLayout({children, }: { children: React.ReactNode ,})
 
         <main className={style.layoutMain}>
             <LayoutMain>
-                {children}
+                    {children}
             </LayoutMain>
         </main>
 

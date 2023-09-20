@@ -2,8 +2,6 @@ import style from "@/styles/home.module.scss"
 import dictionary from "../../public/dictionary/dictionary";
 import TopGamesList from "@/ui-kit/TopGamesList/TopGamesList";
 import {getGenreNames} from "@/services/getGenreNames";
-import {NextResponse} from "next/server";
-import * as querystring from "querystring";
 
 
 
@@ -21,8 +19,12 @@ export default async function Home ({searchParams,}: {searchParams?: { [key: str
                 }
             </div>
         )
-    }else if(searchParams){
-        return<p>{searchParams.search}</p>
+    }else if(searchParams.search){
+        return(
+            <div className={style.search}>
+                {searchParams.search}
+            </div>
+        )
     }
   }
 

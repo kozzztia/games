@@ -3,6 +3,7 @@
 .page{
   width :100%;
   height: auto;
+  padding : var(--container-padding);
   .list{
     display: flex;
     flex-direction: row;

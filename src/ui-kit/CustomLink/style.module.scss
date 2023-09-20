@@ -1,11 +1,32 @@
 .link{
+  position: relative;
   white-space: nowrap;
   cursor: pointer;
   border : 1px solid var(--major-color);
+  transition: var(--transition);
   background: var(--elememt-bg-color);
   padding : var(--elememt-padding);
-  margin  : var(--element-margin)
+  margin-bottom: var(--element-margin);
+  overflow: hidden;
+  //&::after{
+  //  transition: inherit;
+  //  content : "";
+  //  display : block;
+  //  position: absolute;
+  //  width : 50px;
+  //  border : 1px solid var(--major-color);
+  //  transform: rotate(45deg);
+  //  top: 10px;
+  //  left : 100%;
+  //}
+  &:focus,
+  &:hover{
+    color : var(--decor-color);
+    //&::after{
+    //  left : -100%
+    //}
+  }
 }
 .active{
-  color : var(--decor-color);
+  border : 1px solid var(--decor-color);
 }

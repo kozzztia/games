@@ -4,7 +4,16 @@
   cursor: pointer;
   width : inherit;
   height: auto;
+  transition: var(--transition);
   svg{
+    transition: inherit;
     fill : var(--major-color);
+  }
+  &:focus,
+  &:hover{
+    svg{
+      stroke :var(--decor-color);
+      fill : var(--decor-color)
+    }
   }
 }

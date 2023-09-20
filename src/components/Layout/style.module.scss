@@ -8,19 +8,20 @@
 
 .header{
   min-height: var(--header-height);
+  padding : var(--container-padding);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: stretch;
   border-bottom: 1px solid var(--decor-color);
-  .genresList{
-
-  }
   .homeLink{
 
   }
   .burger{
     margin-right :auto;
+  }
+  .hide{
+    transform: scale(0,1);
   }
   .form{
     max-width: 200px;
@@ -29,8 +30,11 @@
 
 .main{
   min-height: var(--main-height);
-  padding-top: 100px;
-
+  padding-top: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 

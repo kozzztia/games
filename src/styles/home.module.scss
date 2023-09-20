@@ -1,4 +1,6 @@
-.home{
+.home,.search{
+  width : 100%;
+  height: auto;
   position: relative;
   display: flex;
   flex-direction: column;

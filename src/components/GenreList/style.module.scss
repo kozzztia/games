@@ -3,7 +3,7 @@
 .list{
   left : 0;
   top : 0;
-  max-width : 300px;
+  width : var(--genres-width);
   height: auto;
   max-height: calc(var(--main-height) - var(--header-height));
   position: relative;

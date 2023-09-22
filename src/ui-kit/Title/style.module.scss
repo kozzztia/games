@@ -2,6 +2,6 @@
 .title{
   display : block;
   position: relative;
-  font-size: 30px;
+  font-size: var(--title-font-size);
   margin-left :  var(--element-margin);
 }

@@ -5,17 +5,16 @@ import classNames from "@/services/classNameGenerator";
 import style from "./style.module.scss"
 import {usePathname, useRouter} from "next/navigation";
 import Image from "next/image";
-import {GenresType} from "@/types/types";
+import {GenreType} from "@/types/GenreTypes";
 
-const CustomLink = ({genre , className} : {genre : GenresType ;className? : string}) => {
+const GenreLink = ({genre , className} : {genre : GenreType ;className? : string}) => {
     const pathName = usePathname()
-    const {push} = useRouter()
     const isActive = pathName === `/${genre.slug}`
     return (
-            <Link href={genre.slug} className={classNames(className!,style.link , isActive?style.active:"")}>
+            <Link href={`/genre/${genre.slug}`} className={classNames(className!,style.genreLink , isActive?style.active:"")}>
                 {genre.name}
             </Link>
     );
 };
 
-export default CustomLink;
+export default GenreLink;

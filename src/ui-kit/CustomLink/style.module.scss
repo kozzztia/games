@@ -1,4 +1,4 @@
-.link{
+.genreLink{
   position: relative;
   white-space: nowrap;
   cursor: pointer;
@@ -16,6 +16,31 @@
     color : var(--decor-color);
     transform: scale(1.05,1);
 
+  }
+}
+.gameLink{
+  color :red;
+}
+
+.homeLink{
+  position: relative;
+  cursor: pointer;
+  width : inherit;
+  height: auto;
+  transition: var(--transition);
+  svg{
+    position: relative;
+    transition: inherit;
+    fill : var(--major-color);
+    width : 30px;
+    height: 30px;
+  }
+  &:focus,
+  &:hover{
+    svg{
+      stroke :var(--decor-color);
+      fill : var(--decor-color)
+    }
   }
 }
 .active{

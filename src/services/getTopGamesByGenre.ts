@@ -1,4 +1,4 @@
-import {gameType} from "@/types/types";
+import {gameType} from "@/types/GameTypes";
 
 
 const api = process.env.GAMES_API

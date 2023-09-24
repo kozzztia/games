@@ -11,7 +11,7 @@ import { headers } from 'next/headers';
 const LayoutHeader = async () => {
     return (
         <div className={classNames(style.header)}>
-            <HomeLink className={style.homeLink}/>
+            <HomeLink/>
             <SearchForm className={style.form}/>
         </div>
     );

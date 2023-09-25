@@ -8,7 +8,7 @@ const TopGamesList = async ({genre , name} : {genre : string , name :string}) =>
     const games  = await getTopGamesByGenre(genre.toLowerCase())
     return (
         <div className={style.page}>
-            <Title title={name}/>
+            <Title title={name} className={style.title}/>
             <ul className={style.list}>
                 {
                     games?.map(item => <GameCard key={item.id} game={item}/>)

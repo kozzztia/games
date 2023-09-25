@@ -4,4 +4,12 @@
   flex-direction: row;
   flex-wrap: wrap;
   padding : var(--container-padding);
+  .title{
+    width : 100%;
+    text-align: center;
+    margin-bottom : var(--bottom-title);
+    &:first-letter{
+      text-transform: uppercase;
+    }
+  }
 }

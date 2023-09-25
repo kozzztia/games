@@ -8,7 +8,7 @@ const SearchGamesList = async ({genre , name , param} : {genre : string , name :
     const games  = await getSearchGamesByGenre(genre.toLowerCase() , param)
     return (
         <div className={style.page}>
-            <Title title={name}/>
+            <Title title={name} className={style.title}/>
             <ul className={style.list}>
                 {
                     games?.map(item => <GameCard key={item.id} game={item}/>)

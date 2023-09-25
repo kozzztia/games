@@ -4,7 +4,7 @@ import Link from "next/link";
 import style from "./style.module.scss"
 
 
-const GenreLink = ({slug , name , className} : {slug :string , name : string , className? : string}) => {
+const GameLink = ({slug , name , className} : {slug :string , name : string , className? : string}) => {
     return (
             <Link href={`/game/${slug}`} className={style.gameLink}>
                 {name}
@@ -12,4 +12,4 @@ const GenreLink = ({slug , name , className} : {slug :string , name : string , c
     );
 };
 
-export default GenreLink;
+export default GameLink;

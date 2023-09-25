@@ -8,10 +8,12 @@
   --title-font-size  : 30px;
   --transition : 0.5s;
   --genres-width : 300px;
+  --card-width : 320px;
   //container
   --container-padding : 20px;
-  --elememt-padding : 5px 10px;
-  --element-margin : 5px;
+  --elememt-padding : 4px 10px;
+  --element-margin : 4px;
+  --bottom-title : 14px;
   //layout
   --header-height :80px;
   --main-height : 100vh;
@@ -22,6 +24,8 @@
   //colors
   --major-color : #b9b9b9;
   --decor-color : rgba(194, 39, 35, 0.6);
+  --genre-title-color : #ffa500;
+  --genre-title-size : 24px;
 
 
 
@@ -33,18 +37,33 @@
     --header-height : 80px;
     --title-font-size : 30px;
     --genres-width : 300px;
+    --card-width : 320px;
+    --genre-title-size : 24px;
+    --bottom-title : 12px;
+    --main-font-size : 20px;
   }
   @include tablet{
     --container-padding : 10px;
     --header-height : 70px;
-    --title-font-size : 25px;
+    --title-font-size : 20px;
     --genres-width : 100px;
+    --card-width : 100%;
+    --genre-title-size : 20px;
+    --elememt-padding : 6px;
+    --bottom-title : 10px;
+    --main-font-size : 18px;
+
   }
   @include mobile{
-    --container-padding : 5px;
+    --container-padding : 4px;
     --header-height : 50px;
-    --title-font-size : 22px;
+    --title-font-size : 18px;
     --genres-width : 50px;
+    --genre-title-size : 18px;
+    --card-width : 100%;
+    --elememt-padding : 2px;
+    --bottom-title : 6px;
+    --main-font-size : 16px;
   }
 }
 * {

@@ -5,6 +5,7 @@ import GameCard from "@/ui-kit/GameCard/GameCard";
 import {getDetailsOfTheGame} from "@/services/getDetailsOfTheGame";
 import {json} from "stream/consumers";
 import {HTMLRenderer} from "@/services/HTMLReader";
+import Title from "@/ui-kit/Title/Title";
 
 type gameParamType = {
     params : {
@@ -15,7 +16,8 @@ const Page = async ({params : {game}} : gameParamType) => {
     const gameDetails = await getDetailsOfTheGame(game)
     return (
         <div className={style.genrePage}>
-            <HTMLRenderer html={gameDetails.description}/>
+            {gameDetails.name&&<Title title={gameDetails.name}/>}
+            {gameDetails.description&&<HTMLRenderer html={gameDetails.description}/>}
         </div>
     );
 };

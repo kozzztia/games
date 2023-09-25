@@ -1,49 +1,76 @@
-.genreLink{
+@import "@/styles/mixin";
+
+.genreLink {
   position: relative;
   white-space: nowrap;
+  height: auto;
   cursor: pointer;
-  border : 1px solid var(--major-color);
+  border: 1px solid var(--major-color);
   transition: var(--transition);
   background: var(--elememt-bg-color);
-  padding : var(--elememt-padding);
+  padding: var(--elememt-padding);
   margin-bottom: var(--element-margin);
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: 25px;
+  color : var(--genre-title-color);
+  font-size: var(--genre-title-size);
 
   &:focus,
-  &:hover{
-    color : var(--decor-color);
-    transform: scale(1.05,1);
-
+  &:hover {
+    transform: scale(1.05, 1);
   }
-}
-.gameLink{
-  color :red;
+
 }
 
-.homeLink{
+
+
+
+
+
+
+
+
+.gameLink {
+  color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.homeLink {
   position: relative;
   cursor: pointer;
-  width : inherit;
+  width: inherit;
   height: auto;
   transition: var(--transition);
-  svg{
+
+  svg {
     position: relative;
     transition: inherit;
-    fill : var(--major-color);
-    width : 30px;
+    fill: var(--major-color);
+    width: 30px;
     height: 30px;
   }
+
   &:focus,
-  &:hover{
-    svg{
-      stroke :var(--decor-color);
-      fill : var(--decor-color)
+  &:hover {
+    svg {
+      stroke: var(--decor-color);
+      fill: var(--decor-color)
     }
   }
 }
-.active{
-  border : 1px solid var(--decor-color);
-  transform: scale(1.05,1);
+
+.active {
+  border: 1px solid var(--decor-color);
+  transform: scale(1.05, 1);
 }

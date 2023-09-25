@@ -2,7 +2,6 @@ import React from 'react';
 import {gameType} from "@/types/GameTypes";
 import style from "./style.module.scss"
 import Title from "@/ui-kit/Title/Title";
-import Image from "next/image";
 import Rating from "@/components/Rating/Rating";
 import GameLink from "@/ui-kit/CustomLink/GameLink";
 const GameCard = ({game} : {game: gameType}) => {

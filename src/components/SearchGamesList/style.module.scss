@@ -4,6 +4,10 @@
   width :100%;
   height: auto;
   padding : var(--container-padding);
+  .title{
+    width : 100%;
+    margin-bottom: var(--bottom-title);
+  }
   .list{
     display: flex;
     flex-direction: row;

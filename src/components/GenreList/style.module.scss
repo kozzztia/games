@@ -1,0 +1,19 @@
+@import "@/styles/mixin";
+
+.list{
+  left : 0;
+  top : 0;
+  width : var(--genres-width);
+  height: auto;
+  max-height: calc(var(--main-height) - var(--header-height));
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding : var(--container-padding);
+  transition: var(--transition);
+  .link{
+    display : block;
+    width : 100%;
+  }
+}

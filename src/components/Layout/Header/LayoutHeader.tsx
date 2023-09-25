@@ -1,12 +1,18 @@
 import React from 'react';
 import style from "../style.module.scss";
-import dictionary from "../../../../public/dictionary/dictionary";
+import classNames from "@/services/classNameGenerator";
+import SearchForm from "@/components/SearchForm/SearchForm";
+import BurgerMenu from "@/ui-kit/BurgerMenu/BurgerMenu";
+import GenreList from "@/components/GenreList/GenreList";
+import HomeLink from "@/ui-kit/CustomLink/HomeLink";
+import { headers } from 'next/headers';
 
-const LayoutHeader = () => {
-    const {headerTitle} = dictionary;
+
+const LayoutHeader = async () => {
     return (
-        <div className={style.header}>
-            {headerTitle}
+        <div className={classNames(style.header)}>
+            <HomeLink/>
+            <SearchForm className={style.form}/>
         </div>
     );
 };

@@ -1,9 +1,11 @@
 
 const dictionary = {
+    metaTitle : "create by kozzztia",
+    metaSubscribe : "thanks api.rawg",
     headerTitle : "header",
-    homeTitle : "home"
+    homeTitle : "home",
+    searchFormPlaceHolder : "insert",
+    searchFormPlaceButton : "search",
+
 }
-
-
-type dictionaryType = (typeof dictionary)
-export default dictionary<dictionaryType>
+export default dictionary

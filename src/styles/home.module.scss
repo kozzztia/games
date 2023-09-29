@@ -4,12 +4,12 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
 }
 .home{
   overflow-y: auto;
   scrollbar-width: thin;
-
   height: calc( var(--main-height) - var(--header-height));
   &::-webkit-scrollbar {
     display: none;

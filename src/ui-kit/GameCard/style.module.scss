@@ -9,10 +9,46 @@
   background: #FFF;
   margin : var(--element-margin) auto ;
   padding: var(--elememt-padding);
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: space-between;
+  display: grid;
+  grid-template-rows: 10% auto 10% 10%;
+  grid-template-areas:
+          "release rating"
+          "title title"
+          "favorite link"
+          "platforms platforms"
+;
+  overflow: hidden;
+
+  &>*{
+    position: relative;
+  }
+  .favorite{
+    grid-area: favorite;
+  }
+  .title{
+    grid-area: title;
+  }
+  .rating{
+    grid-area: rating;
+  }
+  .link{
+    grid-area: link;
+  }
+  .release{
+    grid-area: release;
+  }
+  .platforms{
+    grid-area: platforms;
+  }
+  .image{
+    position: absolute;
+    inset: 0;
+    width : 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(0.4)
+  }
 
 
 }

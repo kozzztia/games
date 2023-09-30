@@ -58,7 +58,8 @@
   svg {
     position: relative;
     transition: inherit;
-    fill: var(--major-color);
+    stroke-width: 1.25px;
+    stroke: var(--major-color);
     width: 30px;
     height: 30px;
   }
@@ -67,7 +68,28 @@
   &:hover {
     svg {
       stroke: var(--decor-color);
-      fill: var(--decor-color)
+    }
+  }
+}
+
+
+.basket{
+  position: relative;
+  background: inherit;
+  transition: var(--transition);
+  cursor: pointer;
+  svg{
+    stroke : var(--major-color);
+    stroke-width: 2.5px;
+    width : 30px;
+    height: 30px;
+  }
+  &:focus,
+  &:hover {
+    svg {
+      transition: var(--transition);
+      stroke: var(--decor-color);
+      fill: transparent;
     }
   }
 }

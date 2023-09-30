@@ -24,14 +24,16 @@
 
 
 
-
-
-
-
-
-
 .gameLink {
-  color: red;
+  color : inherit;
+  text-align: end;
+  transition: var(--transition);
+  &:first-letter{
+    text-transform: uppercase;
+  }
+  &:hover, &:focus{
+    color : var(--genre-title-color)
+  }
 }
 
 

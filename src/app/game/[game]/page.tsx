@@ -1,9 +1,6 @@
 import React from 'react';
-import {getGameByGenre} from "@/services/getGamesByGenre";
-import style from "@/styles/genre.module.scss"
-import GameCard from "@/ui-kit/GameCard/GameCard";
+import style from "@/styles/game.module.scss"
 import {getDetailsOfTheGame} from "@/services/getDetailsOfTheGame";
-import {json} from "stream/consumers";
 import {HTMLRenderer} from "@/services/HTMLReader";
 import Title from "@/ui-kit/Title/Title";
 
@@ -15,7 +12,7 @@ type gameParamType = {
 const Page = async ({params : {game}} : gameParamType) => {
     const gameDetails = await getDetailsOfTheGame(game)
     return (
-        <div className={style.genrePage}>
+        <div className={style.gamePage}>
             {gameDetails.name&&<Title title={gameDetails.name}/>}
             {gameDetails.description&&<HTMLRenderer html={gameDetails.description}/>}
         </div>

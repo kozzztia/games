@@ -7,7 +7,7 @@ const PlatformList = ({platforms , className}  : {className : string , platforms
     return (
         <ul className={classNames(className! , style.list)}>
             {
-               platforms.map(platform => <span key={platform.platform.id} className={style.platform}>{platform.platform.name}</span>)
+               platforms&&platforms.map(platform => <span key={platform.platform.id} className={style.platform}>{platform.platform.name}</span>)
             }
         </ul>
     );

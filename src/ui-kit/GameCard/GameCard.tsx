@@ -1,3 +1,5 @@
+
+
 import React from 'react';
 import {gameType} from "@/types/GameTypes";
 import style from "./style.module.scss"
@@ -13,15 +15,11 @@ const GameCard = ({game}: { game: gameType }) => {
     const {linkTo} = dictionary
     return (
         <div className={style.card}>
-
-            {game.background_image &&
-                <Image src={game.background_image} alt={game.name} width={1600} height={1600} loading={"lazy"}
-                       className={style.image}
-                />}
+            <Image src={game.background_image} alt={game.name} width={1600} height={1600} loading={"lazy"} className={style.image}/>
             <div className={style.release}>{game.released}</div>
             <Title title={game.name} className={style.title}/>
             <Rating rating={game.rating_top} className={style.rating}/>
-            <FavoriteButton className={style.favorite} gameId={game.id}/>
+            <FavoriteButton className={style.favorite} game={game}/>
             <GameLink slug={game.slug} name={linkTo} className={style.link} />
             <PlatformList platforms={game.platforms} className={style.platforms}/>
         </div>

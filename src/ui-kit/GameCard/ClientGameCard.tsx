@@ -17,12 +17,12 @@ const ClientGameCard = ({game} : {game : gameType}) => {
         <div className={style.card}>
             <Image src={game.background_image} alt={game.name} width={1600} height={1600} loading={"lazy"} className={style.image}/>
             <div className={style.release}>{game.released}</div>
-            <Title title={game.name} className={style.title}/>
-            <Rating rating={game.rating_top} className={style.rating}/>
-            <FavoriteButton className={style.favorite} game={game}/>
-            <GameLink slug={game.slug} name={linkTo} className={style.link} />
-            <PlatformList platforms={game.platforms} className={style.platforms}/>
-            <button>remove</button>
+            {/*<Title title={game.name} className={style.title}/>*/}
+            {/*<Rating rating={game.rating_top} className={style.rating}/>*/}
+            {/*<FavoriteButton className={style.favorite} game={game}/>*/}
+            {/*<GameLink slug={game.slug} name={linkTo} className={style.link} />*/}
+            {/*<PlatformList platforms={game.platforms} className={style.platforms}/>*/}
+            {/*<button>remove</button>*/}
         </div>
     );
 };

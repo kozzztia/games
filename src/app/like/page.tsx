@@ -4,8 +4,9 @@ import React, {useEffect, useState} from 'react';
 import style from "@/styles/like.module.scss";
 import {gameType} from "@/types/GameTypes";
 import {fetchLocalData} from "@/services/fetchLocalData";
+import ClientGameCard from "@/ui-kit/GameCard/ClientGameCard";
 
-import GameCard from "@/ui-kit/GameCard/GameCard";
+
 
 
 const Page = () => {
@@ -18,7 +19,9 @@ const Page = () => {
     return (
         <div className={style.like}>
             {
-                likedGames&&likedGames.map(item=> <p key={item.id}>{item.name}</p>)
+                likedGames&&likedGames.map(item=>
+                    <ClientGameCard key={item.id} game={item}/>
+                )
             }
         </div>
     );

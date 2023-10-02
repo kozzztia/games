@@ -9,7 +9,7 @@ const FavoriteButton = ({game , className} : {game : gameType , className? : str
             <svg width="30" height="30" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" className={classNames(className!,style.button)}
                  onClick={async () => {
                      const games : gameType[] | null = await localStoreGetItem("games");
-                     if(games?.includes(game)){
+                     if(games?.some(item => item.id === game.id)){
                          return;
                      } else {
                          await localStoreSetItem('games' , games?[...games , game]:[game]);

@@ -9,7 +9,7 @@ import GameCard from "@/ui-kit/GameCard/GameCard";
 
 
 const Page = () => {
-    const [likedGames , setLikedGames] = useState<number[] | undefined>(undefined)
+    const [likedGames , setLikedGames] = useState<gameType[] | undefined>(undefined)
     useEffect(() => {
         fetchLocalData().then((res)=>{
             setLikedGames(res)
@@ -18,7 +18,7 @@ const Page = () => {
     return (
         <div className={style.like}>
             {
-                likedGames&&likedGames.map(item=> <p key={item}>{item}</p>)
+                likedGames&&likedGames.map(item=> <p key={item.id}>{item.name}</p>)
             }
         </div>
     );

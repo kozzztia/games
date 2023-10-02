@@ -14,17 +14,17 @@ if (isBrowser) {
 
 export const isIndexDBAvailable = () => isBrowser && localForage.supports(localForage.INDEXEDDB);
 
-export const localStoreGetItem = async (id: string): Promise<number[] | null> => {
+export const localStoreGetItem = async (key: string): Promise<gameType[] | null> => {
     if (isIndexDBAvailable()) {
-        const result = await localForage.getItem(id);
-        return (result as number[]) || null;
+        const result = await localForage.getItem(key);
+        return (result as gameType[]) || null;
     } else {
         return null;
     }
 };
 
-export const localStoreSetItem = (id: string, gamesId: number[]) => isIndexDBAvailable() && localForage.setItem(id, gamesId);
+export const localStoreSetItem = (key: string, game: gameType[]) => isIndexDBAvailable() && localForage.setItem(key, game);
 
-export const localStoreRemoveItem = (id: string) => isIndexDBAvailable() && localForage.removeItem(id);
+export const localStoreRemoveItem = (key: string) => isIndexDBAvailable() && localForage.removeItem(key);
 
 export default localStore;

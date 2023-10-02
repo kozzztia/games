@@ -3,5 +3,5 @@ import {gameType} from "@/types/GameTypes";
 
 export         const fetchLocalData = async () => {
     const res = await localStoreGetItem('games');
-    return res as gameType[] | undefined
+    return res as number[] | undefined
 };

@@ -1,4 +1,9 @@
 .button{
     cursor: pointer;
+    fill : transparent;
+    stroke : var(--major-color);
+    transition: var(--transition);
+}
+.liked{
     fill : var(--genre-title-color);
 }

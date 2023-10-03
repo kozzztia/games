@@ -12,15 +12,14 @@ import ClientGameCard from "@/ui-kit/GameCard/ClientGameCard";
 const Page = () => {
     const [likedGames , setLikedGames] = useState<gameType[] | undefined>(undefined)
     useEffect(() => {
-        fetchLocalData().then((res)=>{
-            setLikedGames(res)
-        });
+        fetchLocalData()
+            .then((res)=>setLikedGames(res));
     }, []);
     return (
         <div className={style.like}>
             {
                 likedGames&&likedGames.map(item=>
-                    <ClientGameCard key={item.id} game={item}/>
+                    <ClientGameCard key={item.id} game={item} />
                 )
             }
         </div>
